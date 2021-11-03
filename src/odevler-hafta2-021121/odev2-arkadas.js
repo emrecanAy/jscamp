@@ -7,12 +7,10 @@
  * 
  */
 
-let sum1, sum2;
+let areNumbersFriend = function(number1, number2){
 
-let areNumbersFriend = (number1, number2) => {
-
-    sum1 = sumOfDivisors(number1);
-    sum2 = sumOfDivisors(number2);
+    let sum1 = sumOfDivisors(number1); //220
+    let sum2 = sumOfDivisors(number2); //284
 
     if(number1 == sum2 && number2 == sum1){
         console.log(`${number1} and ${number2} are friend numbers!`);
@@ -22,14 +20,15 @@ let areNumbersFriend = (number1, number2) => {
     
 }
 
-let sumOfDivisors = (number) => {
+let sumOfDivisors = function(number){
 
-    let sum;
+    let sum=0;
 
     for(let i = 0; i < number; i++){
         if(number % i == 0){
-            sum += i;
+            sum += i;          
         }
+
     }
     
     return sum;
